@@ -64,9 +64,9 @@ window.addEventListener('load', () => {
             const {name} = data;
             const temp = Math.round(data.main.temp);
             const {main} = data.weather[0];
-            weatherLocation.textContent = name;
-            weatherTemp.textContent = `${temp} °C`;
-            weatherSummary.textContent = main;
+            weatherLocation.innerHTML = name;
+            weatherTemp.innerHTML = `${temp} °C`;
+            weatherSummary.innerHTML = main;
         })
     })
 });
