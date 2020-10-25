@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     //Quote Generator
     let liveQuote = document.querySelector('#quote');
     let liveAuthor = document.querySelector('#author');
-    fetch('http://quotes.rest/qod.json')
+    fetch('https://quotes.rest/qod.json')
     .then(response => {
         return response.json();
     })
