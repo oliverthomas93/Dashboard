@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="app">
-        <div id="welcome" class="widget wide">
+        <div id="welcome-message" class="widget wide">
             <h1 id="greeting-message">Hello Oliver.</h1>
+        </div>
+        <div id="welcome" class="widget wide">
+            
             <p id="quote"></p>
             <h2 id="author"></h2>
             <span id="they-said-so" style="z-index:50;font-size:0.9em; font-weight: bold;">
@@ -25,12 +28,15 @@
             <h1 id="live-time">00:00:00</h1>
         </div>
         <div id="weather" class="widget">
-            <h1 class="" id="weather-location"></h1>
-            <h2 class="" id="weather-temp"></h2>
-            <h2 class="" id="weather-summary"></h2>
+            <h1 class="" id="weather-location">---</h1>
+            <h2 class="" id="weather-temp">-</h2>
+            <h2 class="" id="weather-summary">-</h2>
         </div>
-        <div id="news" class="widget wide"></div>
-        <div class="widget wide"></div>
+        <div id="news" class="widget wide tall">
+            <div class="news-item"><h1 id="item1"></h1></div>
+            <div class="news-item"><h1 id="item2"></h1></div>
+            <div class="news-item"><h1 id="item3"></h1></div>
+        </div>
     </div>
     <script src="main.js" type="text/javascript"></script>
 </body>
