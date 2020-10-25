@@ -3,24 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>samnoblept.co.uk</title>
 </head>
 <body>
-    <div class="app">
-        <div id="welcome" class="widget wide">
-            <h1 id="greeting-message">Hello Oliver.</h1>
-            <p id="quote"></p>
-        </div>
-        <div id="time" class="widget">
-            <h1 id="date"></h1>
-            <h1 id="live-time">--</h1>
-        </div>
-        <div id="weather" class="widget"></div>
-        <div id="news" class="widget wide"></div>
-        <div class="widget wide"></div>
+    <header>
+        <img id="logo" class="logo" src="SNLOGO1 (1).jpeg" alt="Sam Noble Personal Training Logo">
+    </header>
+    <nav>
+        <ul class="nav">
+            <a href="#logo"><img id="house" src="iconfinder_home_216242.png" alt="home"></a>
+            <img id="menu" src="iconfinder_menu-alt_134216.png" alt="menu">
+            <a href="#logo"><li id="home" class="hidden">HOME</li></a>
+            <a href="#about-link"><li class="hidden">ABOUT</li></a>
+            <a href="#services-header-link"><li class="hidden">SERVICES</li></a>
+            <a href="#testamonials-link"><li class="hidden">TESTAMONIALS</li></a>
+            <a href="#enquiry-form-link"><li class="hidden">CONTACT</li></a>
+        </ul>
+    </nav>
+    <div id="hidden-nav">
+        <a id="link1" href="#about-link">ABOUT</a>
+        <a id="link2" href="#services-header-link">SERVICES</a>
+        <a id="link3" href="#testamonials-link">TESTAMONIALS</a>
+        <a id="link4" href="#enquiry-form-link">CONTACT</a>
     </div>
-    <script src="main.js" type="text/javascript"></script>
+    <main>
+        <div class="hero">
+            <img class="hero-bg" id="img1" src="JollyMedia (67 of 221) (3).jpeg" alt="background">
+            <img class="hero-bg" id="img2" src="JollyMedia (67 of 221) (1).jpeg" alt="background">
+            <img class="hero-bg" id="img3" src="JollyMedia (67 of 221) (2).jpeg" alt="background">
+        </div>
+        <section id="about">
+            <div class="hi-im-sam">
+                <img id="profile-pic" src="2003-1-new (2).jpeg" alt="profile picture">
+                <h1><span id="about-link"></span>Hi, I'm <span>Sam.</span></h1><br>
+                <p>I started my fitness journey at a very young age, when I was eight years old, my parents opened health clubs in Worcestershire called PF2 Health Clubs. Ever since then, fitness has been a huge part of my life, from my Mum convincing me to attend her Bodypump classes in my school holidays, spending five years working within my family’s business, to creating my own Fitness Training business. I have huge amounts of passion when it comes to my client’s health and wellbeing, by forming strong relationships, I work with my clients on their fitness journeys by giving them one on one support, motivation, pushing them to their limits and breaking through barriers to ensure we can create the best results from their training.<br><br> I am a personal trainer who is based in Worcester with clients within Worcester, Droitwich and Malvern. With my latest online services I can now train my clients virtually from all around the world. With my support, I can offer my clients, full dedication to their fitness goals, one hundred percent support and guidance down to their eating habits, their independent training either at the gym or at home, as well as their one on one sessions.<br><br> Group exercise is another huge passion of mine, I am qualified to teach aerobics classes, circuits, HIIT, spinning, kettlebells, step aerobics, as well as four Les Mills Programmes including, Bodyattack, Bodycombat, Bodypump and GRIT. Being in that group environment creates a phenomenal atmosphere where I can connect, engage and motivate all of my participants in front of me. Watching people give their all into an exercise and smiling whilst sweating is incredible, the classes are always filled with a mix of fun and hard work to ensure you get the best workout possible. Back in 2019 myself and three of my team mates competed against other gyms around the country in the LES MILLS GRIT CHAMPIONSHIPS 2019, where we trained hard, dedicated hours of practice and worked strategically as a team to compete in the competition in London. We won the competition and took home the trophy, this also was mentioned in the Worcester News newspaper and online.</p>
+            </div>
+        </section>
+        <div id="services-header">
+            <h1><span id="services-header-link"></span>Services</h1>
+        </div>
+        <section class="services">
+            <div class="services-box1">
+                <div class="grey-box">
+                    <h2>Personal Training</h2>
+                    <ul>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">One on one support, motivation and guidance.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Online or outdoor sessions available.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Nutritional advice.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">30 or 60 minute sessions available.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Fully flexibile booking slots.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-box2">
+                <div class="grey-box">
+                    <h2>Fitness Classes</h2>
+                    <ul>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Online HIIT classes.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Les Mills certified.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Morning, lunchtime, evening and weekend sessions.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Bodyweight and freeweight focussed workouts.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Adaptations and progressions where appropriate.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-box3">
+                <div class="grey-box">
+                    <h2>Training Programs</h2>
+                    <ul>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Fully tailored to your fitness goals.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Designed for either at home or gym use.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Multiple day splits.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Coaching and technique pointers.</li>
+                        <li><img src="PngJoy_tick-mark-queensland-government-logo-white-transparent-png_1740978.png" alt="tick">Discount in multiple purchases.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <h1 class="clients"><span id="testamonials-link"></span>What my clients are saying...</h1>
+        <section class="testamonials">
+            <div class="testamonials-box">
+                <img src="38544396_10214556312720651_3272843093337964544_n.jpg" alt="client picture">
+                <h1>Steve</h1>
+                <h2>Worcester</h2><br>
+                <p>"I have been with Sam for nearly a year now and he is amazing, not like your regular PT, he listens to what you want and treats you like an individual. Would recommend him 110% to anyone, in fact I have and friends have now signed up with him. Give Sam a try, I promise he will get you the results you desire!"</p>
+            </div>
+            <div class="testamonials-box">
+                <img src="21106740_10203726238233369_4430881684994359252_n.jpg" alt="client picture">
+                <h1>Katherine</h1>
+                <h2>Worcester</h2><br>
+                <p>"First HIT class with Sam this morning. I have done thousands of classes before and about 3 a week since the start of lockdown but none have been like Sam. Super friendly guy who motivates you throughout. Workouts are tough but go super quick and I can not wait for the next one. Sam, you are my new number one without a doubt!"</p>
+            </div>
+            <div class="testamonials-box">
+                <img src="88261149_2869402439795650_3200468947325419520_n.jpg" alt="client picture">
+                <h1>Sally</h1>
+                <h2>Worcester</h2><br>
+                <p>"Sam noble is one of the best PT instructors there is. Motavational, energetic, always smiling and is
+                    always there for support, I love all the classes he teaches. He has been a rock to me and many more throughout this lockdown and without his online HIT classes I think I probably would have given up weeks ago! He encourages you every step of the way, even when you really want to give up. Brillant Sam, keep doing what you do best."</p>
+            </div>
+            <div class="testamonials-box">
+                <img src="22467762_103703897059629_9017424276803044479_o.jpg" alt="client picture">
+                <h1>Tabitha</h1>
+                <h2>Worcester</h2><br>
+                <p>"Sam's personal training is a must! His classes are for all abilities in fitness. He has so much energy and a great personality it makes you want to excercise and reach your goals. I did his HIT class this morning, makes me feel good, improves my mental health and gets me ready for the day."</p>
+            </div>
+            <div class="testamonials-box">
+                <img src="97443244_10222438654458159_4805349577022504960_n.jpg" alt="client picture">
+                <h1>Victoria</h1>
+                <h2>Worcester</h2><br>
+                <p>"Sam is the best PT, he keeps me motivated and his energy is amazing. Through this lockdown Sam has been my saviour with his enthusiasm and energy for keeping us fit with his HIT classes. I wouldn’t hesitate in recommending Sam, he’s such a lovely guy and excellent at what he does."</p>
+            </div>
+            <div class="testamonials-box">
+                <img src="67537199_10157221724619435_5720894930738479104_o.jpg" alt="client picture">
+                <h1>Tiffany</h1>
+                <h2>Worcester</h2><br>
+                <p>"Myself and a friend have regular joint PT sessions with sam, he is great at pushing us and making us work hard and also keeping plans updated to use outside of pt sessions! We always have a laugh aswell which gets us through, thanks sam!"</p>
+            </div>
+        </section>
+        <section id="enquiry-form">
+            <h1><span id="enquiry-form-link"></span>Make an Enquiry</h1>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfj4T9WwFMUB2PVqd5zLe_-0ygURkyNgS2ykwgkF13SKaPOtA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <img id="snptimg" src="SNLOGO1 (1).jpeg" alt="Sam Noble Personal Training Logo">
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/samnoblept/" target="_blank"><img src="toppng.com-facebook-icon-png-black-1282x1282.png" alt="facebook icon"></a></li>
+                <li><a href="https://www.instagram.com/samnoblefitness/" target="blank"><img id="ig" src="75-755965_icons-clipart-instagram-logo-instagram-y-facebook-vector.png" alt="instagram icon"></a></li>
+                <li><a href="https://www.linkedin.com/in/sam-noble-724a75b8/" target="blank"><img src="linkedin.png" alt="linkedin icon"></a></li>
+            </ul>
+            <h1>Website by<br> <a href="https://oliverthomas93.github.io/conkerdev1.2/" target="_blank"><span>conkerdev.com</span></a></h1>
+        </div>
+    </footer>
+    <script src="main.js" type="text/javascript" defer></script>
 </body>
 </html>
