@@ -2,9 +2,8 @@ window.addEventListener('load', () => {
 
     //Random Photo Generator
     let welcome = document.querySelector('#welcome');
-    let pics = ["url('./clay-banks-W02d-kJXO5I-unsplash.jpg')", "url('./daniel-sessler-4r3iFXolFec-unsplash.jpg')", "url('./de-an-sun-JWh255yVuhM-unsplash.jpg')", "url('./deglee-degi-SQoH2ZQd80E-unsplash.jpg')", "url('./egor-myznik-EQl-Gjg-rx4-unsplash.jpg')", "url('./fabrizio-conti-E2GXbvCJc58-unsplash.jpg')", "url('./ingmar-i0qX9Y5z2dE-unsplash.jpg')", "url('./ingmar-nW1HHttYIEg-unsplash.jpg')", "url('./kristaps-ungurs-DW8plOVYzbo-unsplash.jpg')", "url('./kristjan-kotar-6vTtNeq9BWk-unsplash.jpg')", "url('./leon-skibitzki-xzQvrNFMZuw-unsplash.jpg')", "url('./massimiliano-morosinotto-k1nok6_4uq8-unsplash.jpg')", "url('./nikolay-vorobyev-f9lFoW_EL1I-unsplash.jpg')", "url('./xandro-vandewalle-yzGPcKZXeks-unsplash.jpg')"];
-    let randNum = Math.floor(Math.random() * pics.length);
-    welcome.style.backgroundImage = pics[randNum];
+    let randNum = Math.ceil(Math.random() * 17);
+    welcome.style.backgroundImage = `url(./${randNum}.jpg)`;
 
     //Greeting Generator
     let greetingMessage = document.querySelector('#greeting-message');
@@ -43,5 +42,31 @@ window.addEventListener('load', () => {
         const {quote, author} = data.contents.quotes[0];
         liveQuote.textContent = `"${quote}"`;
         liveAuthor.textContent = author;
+    })
+
+    //Weather
+    let long;
+    let lat;
+    let weatherLocation = document.querySelector('#weather-location');
+    let weatherTemp = document.querySelector('#weather-temp');
+    let weatherSummary = document.querySelector('#weather-summary');
+
+    navigator.geolocation.getCurrentPosition(position => {
+        long = position.coords.longitude;
+        lat = position.coords.latitude;
+        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=b9d9898bab5284eed1f6817fefd38f63`;
+        fetch(api)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            const {name} = data;
+            const temp = Math.round(data.main.temp);
+            const {main} = data.weather[0];
+            weatherLocation.textContent = name;
+            weatherTemp.textContent = `${temp} °C`;
+            weatherSummary.textContent = main;
+        })
     })
 });

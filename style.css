@@ -36,7 +36,7 @@
     font-size: 24px;
 }
 #time {
-    background-image: url(./zane-lee-IHj0xtWtLKE-unsplash.jpg);
+    background-image: url(./16.jpg);
     color: rgb(238, 236, 236);
     font-size: 9px;
     font-family: Orbitron;
@@ -52,5 +52,13 @@
 }
 #they-said-so {
     text-align: right;
-    margin-right: 15px;
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+}
+#weather {
+    background: linear-gradient(rgb(84, 134, 138), rgb(109, 109, 150));
+    color: rgb(238, 236, 236);
+    font-family: sans-serif;
+    font-size: 12px;
 }
