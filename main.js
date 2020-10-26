@@ -69,7 +69,7 @@ window.addEventListener('load', () => {
             weatherLocation.textContent = name;
             weatherTemp.textContent = `${temp} °C`;
             weatherSummary.textContent = main;
-            weatherIcon.style.backgroundImage = `url(http://openweathermap.org/img/wn/${icon}@2x.png)`;
+            weatherIcon.style.backgroundImage = `url(https://openweathermap.org/img/wn/${icon}@2x.png)`;
         })
     })
 
