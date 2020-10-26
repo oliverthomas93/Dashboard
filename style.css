@@ -93,6 +93,8 @@
     right: 8px;
 }
 #weather-summary {
+    position: relative;
+    bottom: 12px;
     font-size: 8px;
     text-transform: uppercase;
 }
