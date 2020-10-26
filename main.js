@@ -50,6 +50,7 @@ window.addEventListener('load', () => {
     let weatherLocation = document.querySelector('#weather-location');
     let weatherTemp = document.querySelector('#weather-temp');
     let weatherSummary = document.querySelector('#weather-summary');
+    let weatherIcon = document.querySelector('#weather-icon');
 
     navigator.geolocation.getCurrentPosition(position => {
         long = position.coords.longitude;
@@ -64,10 +65,12 @@ window.addEventListener('load', () => {
             const {name} = data;
             const temp = Math.round(data.main.temp);
             const {main} = data.weather[0];
+            const {icon} = data.weather[0];
             weatherLocation.textContent = name;
             weatherTemp.textContent = `${temp} °C`;
             weatherSummary.textContent = main;
+            weatherIcon.style.backgroundImage = `url(http://openweathermap.org/img/wn/${icon}@2x.png)`;
         })
     })
-    
+
 });
