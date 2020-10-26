@@ -65,18 +65,51 @@
     right: 10px;
 }
 #weather {
-    background: linear-gradient(rgb(84, 134, 138), rgb(109, 109, 150));
+    position: relative;
     color: rgb(238, 236, 236);
     font-family: sans-serif;
-    font-size: 12px;
+    justify-content: center;
 }
 #weather-icon {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
+}
+#weather-location, #weather-temp, #weather-feels-like, #feels-like, #weather-wind {
+    display: inline-block;
+    position: absolute;
+}
+#weather-location {
+    font-size: 13px;
+    top: 8px;
+    left: 8px;
+}
+#weather-temp {
+    font-size: 18px;
+    top: 8px;
+    right: 8px;
+}
+#weather-summary {
+    font-size: 8px;
+    text-transform: uppercase;
+}
+#weather-feels-like {
+    font-size: 8px;
+    left: 8px;
+    bottom: 18px;
+}
+#feels-like {
+    font-size: 10px;
+    left: 8px;
+    bottom: 8px;
+}
+#weather-wind {
+    font-size: 10px;
+    right: 8px;
+    bottom: 8px;
 }
 #news {
     background: linear-gradient(rgb(55, 51, 73), rgb(39, 36, 54));
@@ -85,6 +118,4 @@
 .news-item {
     border: 2px rgb(27, 27, 27) solid;
     height: 100%;
-    
-    
 }

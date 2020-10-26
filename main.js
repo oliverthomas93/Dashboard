@@ -17,6 +17,7 @@ window.addEventListener('load', () => {
     };
 
     //Date and Time 
+    
     function dateTime() {
         let date = new Date();
         let h = date.getHours();
@@ -47,10 +48,21 @@ window.addEventListener('load', () => {
     //Weather
     let long;
     let lat;
+    let weather = document.querySelector('#weather');
     let weatherLocation = document.querySelector('#weather-location');
     let weatherTemp = document.querySelector('#weather-temp');
     let weatherSummary = document.querySelector('#weather-summary');
     let weatherIcon = document.querySelector('#weather-icon');
+    let feelsLike = document.querySelector('#feels-like');
+    let wind = document.querySelector('#weather-wind')
+;
+    let weatherDate = new Date();
+        let hour = weatherDate.getHours();
+    if (hour <=6 || hour >= 18) {
+        weather.style.backgroundColor = 'rgb(36, 25, 46)';
+    } else {
+        weather.style.backgroundColor = 'rgb(53, 181, 255)';
+    };
 
     navigator.geolocation.getCurrentPosition(position => {
         long = position.coords.longitude;
@@ -64,13 +76,28 @@ window.addEventListener('load', () => {
             console.log(data);
             const {name} = data;
             const temp = Math.round(data.main.temp);
-            const {main} = data.weather[0];
+            const {description} = data.weather[0];
             const {icon} = data.weather[0];
+            const feels_like = Math.round(data.main.feels_like);
+            const {deg, speed} = data.wind;
+            let windDirection; 
+            
+            if (deg > 315 || deg < 45) {
+                windDirection = 'N';
+            } else if (deg >= 45 && deg <= 135) {
+                windDirection = 'E';
+            } else if (deg > 135 && deg < 225) {
+                windDirection = 'S';
+            } else {
+                windDirection = 'W';
+            };
+            
             weatherLocation.textContent = name;
-            weatherTemp.textContent = `${temp} °C`;
-            weatherSummary.textContent = main;
+            weatherTemp.textContent = `${temp}°`;
+            weatherSummary.textContent = description;
             weatherIcon.style.backgroundImage = `url(https://openweathermap.org/img/wn/${icon}@2x.png)`;
-        })
-    })
-
+            feelsLike.textContent = `FEELS LIKE: ${feels_like}°`;
+            wind.textContent = `${windDirection} ${speed} m/s`;
+        });
+    });
 });
