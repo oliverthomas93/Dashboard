@@ -53,6 +53,9 @@ body {
     font-family: sans-serif;
     font-size: 24px;
 }
+#date {
+    margin: 0 20px 0 20px;
+}
 #time {
     background-image: url(./16.jpg);
     color: rgb(238, 236, 236);
