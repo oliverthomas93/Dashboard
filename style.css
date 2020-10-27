@@ -103,8 +103,9 @@ body {
     right: 8px;
 }
 #weather-summary {
-    position: relative;
-    bottom: 12px;
+    position: absolute;
+    top: 32px;
+    left: 9px;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -123,7 +124,7 @@ body {
     bottom: 8px;
 }
 #news {
-    background: linear-gradient(rgb(55, 51, 73), rgb(39, 36, 54));
+    background: linear-gradient(rgb(39, 36, 54), rgb(51, 66, 73));
     color: rgb(238, 236, 236);
     display: flex;
     font-family: sans-serif;
@@ -133,7 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 10px;
+    margin: 0 10px 0 10px;
 }
 .news-item h1 {
     font-size: 15px;
@@ -145,4 +146,8 @@ body {
 .line {
     border: 2px solid rgba(253, 253, 253, 0.068);
     margin: 0 20px 0 20px;
+}
+#guardian {
+    width: 170px;
+    margin-top: 10px;
 }
