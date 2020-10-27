@@ -17,7 +17,6 @@ window.addEventListener('load', () => {
     };
 
     //Date and Time 
-    
     function dateTime() {
         let date = new Date();
         let h = date.getHours();
@@ -35,7 +34,9 @@ window.addEventListener('load', () => {
     //Quote Generator
     let liveQuote = document.querySelector('#quote');
     let liveAuthor = document.querySelector('#author');
-    fetch('https://quotes.rest/qod.json')
+    const apiQuote = 'https://quotes.rest/qod.json';
+
+    fetch(apiQuote)
     .then(response => {
         return response.json();
     })
@@ -55,20 +56,20 @@ window.addEventListener('load', () => {
     let weatherIcon = document.querySelector('#weather-icon');
     let feelsLike = document.querySelector('#feels-like');
     let wind = document.querySelector('#weather-wind')
-;
+
     let weatherDate = new Date();
         let hour = weatherDate.getHours();
     if (hour <=6 || hour >= 18) {
         weather.style.backgroundColor = 'rgb(36, 25, 46)';
     } else {
-        weather.style.backgroundColor = 'rgb(53, 181, 255)';
+        weather.style.backgroundColor = 'rgb(0, 120, 189)';
     };
 
     navigator.geolocation.getCurrentPosition(position => {
         long = position.coords.longitude;
         lat = position.coords.latitude;
-        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=b9d9898bab5284eed1f6817fefd38f63`;
-        fetch(api)
+        const apiWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=b9d9898bab5284eed1f6817fefd38f63`;
+        fetch(apiWeather)
         .then(response => {
             return response.json();
         })
@@ -100,4 +101,36 @@ window.addEventListener('load', () => {
             wind.textContent = `${windDirection} ${speed} m/s`;
         });
     });
+
+    //News
+    let item1 = document.querySelector('#item1');
+    let item2 = document.querySelector('#item2');
+    let item3 = document.querySelector('#item3');
+    let item1Link = document.querySelector('#item1-link');
+    let item2Link = document.querySelector('#item2-link');
+    let item3Link = document.querySelector('#item3-link');
+    const apiNews = `https://content.guardianapis.com/search?section=uk-news&order-by=newest&api-key=7f2c3fe6-a96e-4582-9b51-205c0159f541`;
+
+    fetch(apiNews)
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        let webTitle1 = data.response.results[0].webTitle;
+        let webTitle2 = data.response.results[1].webTitle;
+        let webTitle3 = data.response.results[2].webTitle;
+        let webLink1 = data.response.results[0].webUrl;
+        let webLink2 = data.response.results[1].webUrl;
+        let webLink3 = data.response.results[2].webUrl;
+
+        item1.textContent = '"' + webTitle1 + '."';
+        item2.textContent = '"' + webTitle2 + '."';
+        item3.textContent = '"' + webTitle3 + '."';
+        item1Link.href = webLink1;
+        item2Link.href = webLink2;
+        item3Link.href = webLink3;
+    })
+
+
 });
